@@ -1,0 +1,11 @@
+
+@import "_reset.scss";
+@import "variables/_colors.scss";
+@import "variables/_sizes.scss";
+
+/*Components*/
+@import "components/_button.scss";
+
+body {
+    background-color: $color-theme;
+}
