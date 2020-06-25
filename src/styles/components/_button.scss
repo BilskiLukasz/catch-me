@@ -1,5 +1,5 @@
 .button {
-    min-width: 120px;
+    min-width: $min-width;
     background-color: $color-active-button;
     padding: $padding-button;
 }
