@@ -5,8 +5,9 @@
 
 /*Components*/
 @import "components/_button.scss";
-@import "components/_loginModal.scss";
-@import "components/_recapModal.scss";
+
+/* Views */
+@import "views/_modal.scss";
 
 body {
     background-color: $color-theme;

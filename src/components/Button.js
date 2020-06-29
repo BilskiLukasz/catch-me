@@ -1,11 +1,12 @@
 import React from 'react';
 
 const Button = ({
+    onClickFn,
     textOnButton,
 }) => {
     return(
-        <button className="button">
-            {textOnButton}
+        <button className="button" onClick={onClickFn}>
+            {textOnButton.toUpperCase()}
         </button>
     )
 }

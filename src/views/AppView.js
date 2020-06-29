@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import '../styles/appView.scss';
-import LoginModal from '../components/LoginModal';
+import RecapModal from './RecapModal';
+import LoginModal from './LoginModal';
+import Button from '../components/Button';
 
 class App extends Component {
   constructor(props) {
@@ -8,16 +10,43 @@ class App extends Component {
     this.state = {
       name: 'g',
       actualScore: '',
-      bestScore: ''
+      bestScore: '',
+      isRecapModalOpen: false,
+      isLoginModalOpen: true,
     }
   };
 
-  render(){
-    console.log(this.state.name ? true : false);
+  closeRecapModal = () => {
+    this.setState({
+      isRecapModalOpen: false,
+    })
+  }
 
+  closeLoginModal = () => {
+    this.setState({
+      isLoginModalOpen: false,
+    })
+  }
+
+  openRecapModal = () =>{
+    this.setState({
+      isRecapModalOpen: true,
+    })
+  }
+
+  openLoginModal = () =>{
+    this.setState({
+      isLoginModalOpen: true,
+    })
+  }
+
+  render(){
     return (
       <Fragment>
-        {!this.state.name && <LoginModal />}
+        <Button textOnButton="Otwórz Recap Modal" onClickFn={this.openRecapModal}></Button>
+        <Button textOnButton="Otwórz Login Modal" onClickFn={this.openLoginModal}></Button>
+        { this.state.isRecapModalOpen && <RecapModal closeRecapFn={this.closeRecapModal}/>}
+        { this.state.isLoginModalOpen && <LoginModal closeLoginFn={this.closeLoginModal}/>}
       </Fragment>
     );
   }

@@ -1,5 +1,14 @@
 .button {
-    min-width: $min-width;
     background-color: $color-active-button;
     padding: $padding-button;
+    border: none;
+    min-width: fit-content;
+    border-radius: 2rem;
+    box-shadow: 0.2rem 0.2rem 1rem $color-theme-shadow;
+    transition: 0.1s ease;
+
+    &:active {
+        background-color: $color-theme;
+    }
 }
+
