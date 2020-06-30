@@ -8,9 +8,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'g',
-      actualScore: '',
-      bestScore: '',
+      name: 'Łukasz',
+      actualScore: '56',
+      bestScore: '74',
       isRecapModalOpen: false,
       isLoginModalOpen: true,
     }

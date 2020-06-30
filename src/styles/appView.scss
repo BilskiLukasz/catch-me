@@ -1,14 +1,16 @@
 
 @import "_reset.scss";
 @import "variables/_colors.scss";
-@import "variables/_sizes.scss";
+@import "variables/_custom.scss";
 
 /*Components*/
 @import "components/_button.scss";
+@import "components/_title.scss";
+@import "components/_shortInfo.scss";
 
 /* Views */
 @import "views/_modal.scss";
 
 body {
-    background-color: $color-theme;
+    background-color: $color-gray;
 }

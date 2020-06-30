@@ -1,32 +1,31 @@
 .modal {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background:$color-theme-modal;
     max-width: 100rem;
     margin: 10rem auto;
-    font-size: 1.6rem;
-    box-shadow: 0.3rem 0.3rem 1rem 0.4rem $color-theme-shadow;
+    box-shadow: $big-shadow;
     border-radius: 0.5rem;
 
     &-section {
         padding: 5rem;
         grid-gap: 5rem;
         display: grid;
-
-        &-items {
-            display: grid;
-            grid-gap: 1rem;
-            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-        }
+        align-items: center;
+        align-content: center;
 
         &-output {
-            background-color: $color-theme;
+            background-color: $color-white-opacity;
+        }
+
+        &-input {
+            background-color: $color-gray-darker;
         }
     }
 }
 
 @media (max-width: 768px) {
     .modal {
+        margin: 3rem auto;
         max-width: 80vw;
         grid-template-columns: 1fr;
     }

@@ -3,12 +3,13 @@
     padding: $padding-button;
     border: none;
     min-width: fit-content;
+    height: fit-content;
     border-radius: 2rem;
-    box-shadow: 0.2rem 0.2rem 1rem $color-theme-shadow;
+    box-shadow: $small-shadow;
     transition: 0.1s ease;
 
     &:active {
-        background-color: $color-theme;
+        background-color: $color-gray;
     }
 }
 
