@@ -1,10 +1,10 @@
 .button {
     background-color: $color-active-button;
-    padding: $padding-button;
+    padding: $padding-oneline-element;
     border: none;
     min-width: fit-content;
     height: fit-content;
-    border-radius: 2rem;
+    border-radius: $radius-oneline-element;
     box-shadow: $small-shadow;
     transition: 0.1s ease;
 

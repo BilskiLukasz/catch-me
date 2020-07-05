@@ -5,7 +5,10 @@ const Button = ({
     textOnButton,
 }) => {
     return(
-        <button className="button" onClick={onClickFn}>
+        <button 
+            className= "button"
+            onClick={onClickFn}            
+            >
             {textOnButton.toUpperCase()}
         </button>
     )

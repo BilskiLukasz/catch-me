@@ -1,0 +1,22 @@
+.form-group {
+    border: 1px solid $color-white-opacity;
+    padding: $padding-oneline-element;
+    box-shadow: $small-shadow;
+
+    &-title {
+        padding: $padding-oneline-element;
+        box-shadow: $small-shadow;
+        border-radius: $radius-oneline-element;
+        text-align: center;
+        margin: 0 auto 2rem auto;
+        width: 80%;
+        background-color: white;
+        font-size: 1.6rem;
+    }
+
+    &-elements {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem;
+    }
+}

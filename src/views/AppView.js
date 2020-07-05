@@ -3,14 +3,16 @@ import '../styles/appView.scss';
 import RecapModal from './RecapModal';
 import LoginModal from './LoginModal';
 import Button from '../components/Button';
+import AppContext from '../Context'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Łukasz',
-      actualScore: '56',
-      bestScore: '74',
+      name: 'Przykładowe',
+      actualScore: 56,
+      bestScore: 74,
+      gameBoardSize: 0,
       isRecapModalOpen: false,
       isLoginModalOpen: true,
     }
@@ -43,10 +45,12 @@ class App extends Component {
   render(){
     return (
       <Fragment>
-        <Button textOnButton="Otwórz Recap Modal" onClickFn={this.openRecapModal}></Button>
-        <Button textOnButton="Otwórz Login Modal" onClickFn={this.openLoginModal}></Button>
-        { this.state.isRecapModalOpen && <RecapModal closeRecapFn={this.closeRecapModal}/>}
-        { this.state.isLoginModalOpen && <LoginModal closeLoginFn={this.closeLoginModal}/>}
+        <AppContext.Provider value={this.state}>
+          <Button textOnButton="Otwórz Recap Modal" onClickFn={this.openRecapModal}></Button>
+          <Button textOnButton="Otwórz Login Modal" onClickFn={this.openLoginModal}></Button>
+          { this.state.isRecapModalOpen && <RecapModal closeRecapFn={this.closeRecapModal}/>}
+          { this.state.isLoginModalOpen && <LoginModal closeLoginFn={this.closeLoginModal}/>}
+        </AppContext.Provider>
       </Fragment>
     );
   }
