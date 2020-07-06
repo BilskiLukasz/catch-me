@@ -12,13 +12,13 @@ const RecapModal = ({
         <AppContext.Consumer>
             {(context) => (<div className="modal">
                 <div className="modal-section modal-section-output">
-                    <Title toEmphasize={context.name} restTitle="twoje wyniki:"/>
-                    <ShortInfo text={`Aktualny wynik: ${context.actualScore}`}/>
-                    <ShortInfo text={`Najlepszy wynik: ${context.bestScore}`}/>
+                    <Title toEmphasize={context.appState.name} restTitle="twoje wyniki:"/>
+                    <ShortInfo text={`Aktualny wynik: ${context.appState.actualScore}`}/>
+                    <ShortInfo text={`Najlepszy wynik: ${context.appState.bestScore}`}/>
                 </div>
                 <div className="modal-section modal-section-input">
                     <FormGroup />
-                    <Button onClickFn={closeRecapFn} textOnButton="zamknij modala"/>
+                    <Button onClickFn={closeRecapFn} textOnButton="Zagraj ponownie"/>
                 </div>
             </div>)}
         </AppContext.Consumer>

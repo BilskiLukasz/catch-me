@@ -7,9 +7,14 @@
     border-radius: $radius-oneline-element;
     box-shadow: $small-shadow;
     transition: 0.1s ease;
+    text-align: center;
 
     &:active {
         background-color: $color-gray;
     }
+}
+
+.active {
+    background-color: $color-gray;
 }
 

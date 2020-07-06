@@ -9,10 +9,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Przykładowe',
+      name: 'Gracz',
       actualScore: 56,
       bestScore: 74,
-      gameBoardSize: 0,
+      gameBoardSize: "5",
       isRecapModalOpen: false,
       isLoginModalOpen: true,
     }
@@ -42,10 +42,24 @@ class App extends Component {
     })
   }
 
+  updateGameBoardSize = (e) => {
+    this.setState({
+      gameBoardSize: e.target.value,
+    })
+  }
+
+  updateName = (e) => {
+    this.setState({
+      name: e.target.value,
+    })
+  }
+
+
   render(){
     return (
       <Fragment>
-        <AppContext.Provider value={this.state}>
+        <AppContext.Provider 
+          value={{appState: this.state, updateGameBoardSize: this.updateGameBoardSize , updateName: this.updateName}}>
           <Button textOnButton="Otwórz Recap Modal" onClickFn={this.openRecapModal}></Button>
           <Button textOnButton="Otwórz Login Modal" onClickFn={this.openLoginModal}></Button>
           { this.state.isRecapModalOpen && <RecapModal closeRecapFn={this.closeRecapModal}/>}

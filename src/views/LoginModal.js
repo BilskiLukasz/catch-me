@@ -11,9 +11,12 @@ const LoginModal = ({
     return (
         <div className="modal">
             <div className="modal-section modal-section-input">
-                <InputField sampleText="Podaj swoję Imię"/>
+                <InputField 
+                    sampleText="Podaj swoję Imię"/>
                 <FormGroup />
-                <Button onClickFn={closeLoginFn} textOnButton="zamknij modala"/>
+                <Button 
+                    onClickFn={closeLoginFn} 
+                    textOnButton="rozpocznij grę"/>
             </div>
             <div className="modal-section modal-section-output">
                 <Title toEmphasize="Cześć"/>

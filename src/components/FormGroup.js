@@ -1,30 +1,65 @@
 import React from 'react';
-import Button from './Button';
+import AppContext from '../Context'
+import FormGroupOption from './FromGroupOption';
 
 const FormGroup = () => {
-    
-    return (
-        <fieldset className="form-group">
-            <legend className="form-group-title">Wybierz rozmiar planszy:</legend>
 
-                <div className="form-group-elements">
+        return (
+            <AppContext.Consumer>
+                {(context) => 
+                    <fieldset className="form-group">
+                    <legend className="form-group-title">Wybierz rozmiar planszy:</legend>
+        
+                        <div className="form-group-elements">
 
-                <label className="button">
-                <input type="radio" name="group1" value="1"/>
-                    Pierwszy
-                </label>
-                <label className="button">
-                <input type="radio" name="group1" value="2"/>
-                    Drugi
-                </label>
-                <label className="button">
-                <input type="radio" name="group1" value="3"/>
-                    Trzeci
-                </label>
+                            <FormGroupOption
+                                appState={context.appState.gameBoardSize}
+                                name="size-option" 
+                                onClickFn={context.updateGameBoardSize} 
+                                value="4">
+                            </FormGroupOption>
 
-                </div>
-        </fieldset>
-    )
+                            <FormGroupOption 
+                                appState={context.appState.gameBoardSize}
+                                name="size-option" 
+                                onClickFn={context.updateGameBoardSize} 
+                                value="5">
+                            </FormGroupOption>
+
+                            <FormGroupOption
+                                appState={context.appState.gameBoardSize}
+                                name="size-option" 
+                                onClickFn={context.updateGameBoardSize} 
+                                value="6">
+                            </FormGroupOption>
+
+                            <FormGroupOption
+                                appState={context.appState.gameBoardSize}
+                                name="size-option" 
+                                onClickFn={context.updateGameBoardSize} 
+                                value="7">
+                            </FormGroupOption>
+
+                            <FormGroupOption
+                                appState={context.appState.gameBoardSize}
+                                name="size-option" 
+                                onClickFn={context.updateGameBoardSize} 
+                                value="8">
+                            </FormGroupOption>
+
+                            <FormGroupOption
+                                appState={context.appState.gameBoardSize}
+                                name="size-option" 
+                                onClickFn={context.updateGameBoardSize} 
+                                value="9">
+                            </FormGroupOption>
+
+                        </div>
+                </fieldset>
+                }
+            </AppContext.Consumer>
+        )
 }
+
 
 export default FormGroup;
