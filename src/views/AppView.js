@@ -4,6 +4,7 @@ import RecapModal from './RecapModal';
 import LoginModal from './LoginModal';
 import Button from '../components/Button';
 import AppContext from '../Context'
+import GameBoard from './GameBoard';
 
 class App extends Component {
   constructor(props) {
@@ -62,6 +63,7 @@ class App extends Component {
           value={{appState: this.state, updateGameBoardSize: this.updateGameBoardSize , updateName: this.updateName}}>
           <Button textOnButton="Otwórz Recap Modal" onClickFn={this.openRecapModal}></Button>
           <Button textOnButton="Otwórz Login Modal" onClickFn={this.openLoginModal}></Button>
+          <GameBoard></GameBoard>
           { this.state.isRecapModalOpen && <RecapModal closeRecapFn={this.closeRecapModal}/>}
           { this.state.isLoginModalOpen && <LoginModal closeLoginFn={this.closeLoginModal}/>}
         </AppContext.Provider>

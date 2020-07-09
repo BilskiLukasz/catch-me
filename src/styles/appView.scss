@@ -10,9 +10,11 @@
 @import "components/inputField";
 @import "components/form-group";
 @import "components/radio";
+@import "components/gameBoardTile";
 
 /* Views */
 @import "views/_modal.scss";
+@import "views/gameBoards";
 
 body {
     background-color: $color-gray;
